@@ -1,5 +1,5 @@
 // deployment config
-let base = "/test-site/"
+let base = "./test-site/"
 
 // local config
 // let base = "./"
