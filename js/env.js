@@ -1,8 +1,8 @@
 // deployment config
-let base = "./test-site/"
+let base = "/test-site/";
 
 // local config
-// let base = "./"
+// let base = "./";
 
-let html_assets = "html_assets/"
-export let basepath = base + html_assets
+export let basepath = base;
+export let html_assets = "html_assets/";
