@@ -1,0 +1,96 @@
+<!-- tests.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Tests</title>
+        <link rel="stylesheet" href="styles/css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Sidebar -->
+            <aside>
+                <div id="sidebar"></div>
+                <!-- sidebar Content will be loaded here dynamically -->
+            </aside>
+            <!-- Content -->
+            <main class="content" id="main-content">
+                <div id="top-nav"></div>
+                <!-- tests.html -->
+                <div class="tests-content">
+                    <h1>Manage Tests</h1>
+                    <p>Here you can create, update, and delete tests.</p>
+                    <div id="toggle-menu-wrapper">
+                        <!-- <span class="material-symbols-outlined">lists</span> -->
+                        <div id="tests-content-toggle">Drop Menu</div>
+                        <span class="material-symbols-outlined arrow">arrow_drop_down</span>
+                    </div>
+                    <!-- Add more content for managing tests -->
+                    <div id="tests">
+                        <div id="create-test" class="create tests-nav active">Create</div>
+                        <div id="read-test" class="read tests-nav">Read</div>
+                        <div id="update-test" class="update tests-nav">Update</div>
+                        <div id="delete-test" class="delete tests-nav">Delete</div>
+                    </div>
+                    <div id="display">
+                        <div id="create-section" class="create display active">
+                            <div class="test-upload-form">
+                                <label for="test-title">Test Title</label>
+                                <input id="test-title" type="text" placeholder="Test Title">
+                                <div class="upload-button-wrap">
+                                    <label class="upload-button" for="file-input">Choose File</label>
+                                    <input type="file" id="file-input" accept=".csv, .xlsx, .xls">
+                                </div>
+                                <p id="alert-message"></p>
+                            </div>
+                            <button id="add-test" class="file-upload-btn">Add Test</button>
+                            <div id="create-results" class="create-results">results Here</div>
+                        </div>
+                        <div id="read-section" class="read display">
+                            <div class="total-tests">
+                                <h4>Total Tests</h4>
+                                <div id="total-counts"></div>
+                            </div>
+                            <div class="select-test">
+                                <label class="select-test" for="select-test-title">Select Test</label>
+                                <input id="select-test-title" list="tests_list" name="test">
+                                <datalist id="tests_list"></datalist>
+                            </div>
+                            <div id="selected-results" class="selected-results">result Here</div>
+                        </div>
+                        <div id="update-section" class="update display">
+                            <div class="select-test">
+                                <label class="select-test" for="update-test-title">Select Test</label>
+                                <input id="update-test-title" list="update_tests_list" name="test">
+                                <datalist id="update_tests_list"></datalist>
+                            </div>
+                            <div class="select-question">
+                                <label class="select-question" for="update-test-question">Select Question</label>
+                                <input id="update-test-question" list="questions_list" name="test">
+                                <datalist id="questions_list"></datalist>
+                            </div>
+                            <div class="updated-results">
+                                <div id="update-results"></div>
+                                <button id="save-changes">Save Changes</button>
+                            </div>
+                        </div>
+                        <div id="delete-section" class="delete display">
+                            <button id="delete-view-tests-button">Choose test</button>
+                            <button id="delete-tests-button">Delete</button>
+                            <div id="delete-form">results here</div>
+                        </div>
+                    </div>
+            </main>
+        </div>
+        <script type="module" src="./js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fs-js@1.0.6/index.min.js"></script>
+        <script type="module" src="./js/tests_content.js"></script>
+    </body>
+
+</html>

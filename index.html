@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link rel="stylesheet" href="styles/css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+
+    <body>
+        <div id="index-page-container" class="container">
+            <!-- Sidebar -->
+            <aside>
+                <div id="sidebar"></div>
+                <!-- sidebar Content will be loaded here dynamically -->
+            </aside>
+            <!-- Content -->
+            <main class="content" id="main-content">
+                <div id="top-nav"></div>
+                <!-- Content will be loaded here dynamically -->
+                <!-- index.html -->
+                <div class="index-content">
+                    <h1>Welcome <span id="welcome-greet"></span></h1>
+                    <p><span id="welcome-message">Login & </span>Explore tests below !</p>
+                    <div id="profile">profile section</div>
+                    <!-- Add more content for viewing results -->
+                </div>
+            </main>
+        </div>
+        <div id="playground">
+            <div id="playarea">playarea</div>
+        </div>
+        <script type="module" src="./js/main.js"></script>
+        <script type="module" src="./js/index_content.js"></script>
+    </body>
+
+</html>
