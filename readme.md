@@ -4,7 +4,7 @@ This is a demo Vanilla JavaScript application for managing tests. It provides th
 
 ## Live Demo
 
-![Live Project](https://mrxsierra.github.io/test-site/)
+[Live Project](https://mrxsierra.github.io/test-site/)
 
 ## Features
 - **Test Management**: Create, manage, update, and delete tests.
