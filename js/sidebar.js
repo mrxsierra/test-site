@@ -10,7 +10,7 @@ let html_assets_dir = html_assets_path.endsWith("/") ? html_assets_path : html_a
 //sidebar
 let sidebarContainer;
 export function loadSidebar() {
-    return fetch(html_assets_dir + 'sidebar.html')
+    return fetch(`${html_assets_dir}sidebar.html`) // Updated to use template literal
         .then(response => response.text())
         .then(html => {
             sidebarContainer = document.getElementById('sidebar');
@@ -29,7 +29,7 @@ export function loadSidebar() {
 
 // topnav
 export function loadTopNav() {
-    return fetch(html_assets_dir + 'topnav.html')
+    return fetch(`${html_assets_dir}topnav.html`) // Updated to use template literal
         .then(response => response.text())
         .then(html => {
             const topNavContainer = document.getElementById('top-nav');

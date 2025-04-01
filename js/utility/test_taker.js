@@ -20,7 +20,7 @@ export async function loadTestTaker() {
 }
 
 async function fetchTestSelectorData() {
-    return fetch(html_assets_dir + "select_tt.html")
+    return fetch(`${html_assets_dir}select_tt.html`) // Ensure dynamic path
         .then(response => response.text())
         .then(html => {
             playarea = document.getElementById("playarea");
@@ -31,7 +31,7 @@ async function fetchTestSelectorData() {
             }
         })
         .catch(err => {
-            console.error("Error fetching test-selector container: ", err)
+            console.error("Error fetching test-selector container: ", err);
             throw err;
         });
 }

@@ -3,7 +3,7 @@ import { checkLoginStatus, loadLoginPage, logoutUser } from "./utility/login.js"
 import { loadTestTaker } from "./utility/test_taker.js";
 
 export async function indexContentInitialize() {
-    const activePage = window.location.pathname.toString().replace('/', '').replace('.html', '');
+    const activePage = window.location.pathname.split('/').pop().replace('.html', '');
     const loginLogout = document.getElementById("login-logout-toggle");
     // console.log(activePage);
 

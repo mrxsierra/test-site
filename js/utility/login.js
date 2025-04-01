@@ -42,7 +42,7 @@ export function loadLocalStorageProfiles() {
 }
 
 export function loadLoginPage() {
-    return fetch(html_assets_dir + 'register.html')
+    return fetch(`${html_assets_dir}register.html`) // Ensure dynamic path
         .then(response => response.text())
         .then(html => {
             if (playarea) {
@@ -173,8 +173,8 @@ async function loadUserProfile() {
 
 async function fetchProfile() {
     try {
-        const response = await fetch(html_assets_dir + "profile.html");
-        const html = await response.text()
+        const response = await fetch(`${html_assets_dir}profile.html`); // Ensure dynamic path
+        const html = await response.text();
         userProfile.innerHTML = html;
     } catch (err) {
         console.error("Error fetching Profile: ", err);
@@ -259,8 +259,8 @@ async function changePass() {
 
 async function fetchChangePass() {
     try {
-        const response = await fetch(html_assets_dir + "pass_change.html");
-        const html = await response.text()
+        const response = await fetch(`${html_assets_dir}pass_change.html`); // Ensure dynamic path
+        const html = await response.text();
         playarea.innerHTML = html;
     } catch (err) {
         console.error("Error fetching Profile: ", err);
