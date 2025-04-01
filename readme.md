@@ -3,6 +3,7 @@
 This is a demo Vanilla JavaScript application for managing tests. It provides the following features:
 
 ## Live Demo
+
 ![Live Project](https://mrxsierra.github.io/test-site/)
 
 ## Features
