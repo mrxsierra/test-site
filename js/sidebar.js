@@ -3,11 +3,12 @@
 import { loadDemo } from "./utility/load.js";
 import { writeTestsObject } from "./utility/file_handle.js";
 import { checkLoginStatus, logoutUser } from "./utility/login.js";
+import { basepath } from "./env.js";
 
 //sidebar
 let sidebarContainer;
 export function loadSidebar() {
-    return fetch('./html_assets/sidebar.html')
+    return fetch(basepath + 'sidebar.html')
         .then(response => response.text())
         .then(html => {
             sidebarContainer = document.getElementById('sidebar');
@@ -26,7 +27,7 @@ export function loadSidebar() {
 
 // topnav
 export function loadTopNav() {
-    return fetch('./html_assets/topnav.html')
+    return fetch(basepath + 'topnav.html')
         .then(response => response.text())
         .then(html => {
             const topNavContainer = document.getElementById('top-nav');
