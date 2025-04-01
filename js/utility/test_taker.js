@@ -1,6 +1,8 @@
 import { profiles, sessionProfile } from "./login.js";
 import { loadSelectTest, writeTestsObject, tests_object } from "./file_handle.js";
-import { basepath, html_assets } from "../env.js";
+import { html_assets_path } from "../env.js";
+
+let html_assets_dir = html_assets_path.endsWith("/") ? html_assets_path : html_assets_path + "/";
 
 export let startAnomaly, userAnamolies, playarea, ttQuestions, testId, startTime, endTime, durationTaken, remainingTimeString, start, end, remain, timerId;
 
@@ -18,7 +20,7 @@ export async function loadTestTaker() {
 }
 
 async function fetchTestSelectorData() {
-    return fetch(basepath + html_assets + "select_tt.html")
+    return fetch(html_assets_dir + "select_tt.html")
         .then(response => response.text())
         .then(html => {
             playarea = document.getElementById("playarea");

@@ -2,8 +2,9 @@
 import { displayData, jsonToHtmlTable } from "./file_handle.js";
 import { Profiles } from "./temp_profile.js";
 import { loadTestTaker } from "./test_taker.js";
-import { basepath, html_assets } from "../env.js";
+import { html_assets_path } from "../env.js";
 
+let html_assets_dir = html_assets_path.endsWith("/") ? html_assets_path : html_assets_path + "/";
 export let playarea, profiles, loginAlert, signupAlert, userProfile, sessionProfile;
 
 
@@ -41,7 +42,7 @@ export function loadLocalStorageProfiles() {
 }
 
 export function loadLoginPage() {
-    return fetch(basepath + html_assets + 'register.html')
+    return fetch(html_assets_dir + 'register.html')
         .then(response => response.text())
         .then(html => {
             if (playarea) {
@@ -172,7 +173,7 @@ async function loadUserProfile() {
 
 async function fetchProfile() {
     try {
-        const response = await fetch(basepath + html_assets + "profile.html");
+        const response = await fetch(html_assets_dir + "profile.html");
         const html = await response.text()
         userProfile.innerHTML = html;
     } catch (err) {
@@ -258,7 +259,7 @@ async function changePass() {
 
 async function fetchChangePass() {
     try {
-        const response = await fetch(basepath + html_assets + "pass_change.html");
+        const response = await fetch(html_assets_dir + "pass_change.html");
         const html = await response.text()
         playarea.innerHTML = html;
     } catch (err) {
