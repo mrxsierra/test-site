@@ -10,6 +10,11 @@ export let playarea, profiles, loginAlert, signupAlert, userProfile, sessionProf
 
 export function checkLoginStatus() {
     playarea = document.getElementById("playarea");
+
+    // debug
+    console.log("checking login status")
+    //
+
     if (localStorage.profiles) {
         if (sessionStorage.profile) {
             loadLocalStorageProfiles();
@@ -21,6 +26,11 @@ export function checkLoginStatus() {
     } else {
         alert("No Local Storage of users profiles.\n\nplz Register First!");
         profiles = new Profiles();
+
+        // debug
+        console.log(profiles)
+        //
+        
         window.profiles = profiles;
         loadLoginPage();
     }
