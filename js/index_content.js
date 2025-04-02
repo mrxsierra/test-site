@@ -3,7 +3,7 @@ import { checkLoginStatus, loadLoginPage, logoutUser } from "./utility/login.js"
 import { loadTestTaker } from "./utility/test_taker.js";
 import { basepath } from "./env.js";
 
-let homepaths = ["index.html", "/", basepath + "index.html", basepath]
+let homepaths = ["/index.html", "/", basepath + "index.html", basepath]
 
 export async function indexContentInitialize() {
     const activePage = window.location.pathname;
