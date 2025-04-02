@@ -1,0 +1,11 @@
+type,difficulty,category,question,correct_answer,incorrect_answers
+multiple,medium,Science: Mathematics,"To the nearest whole number, how many radians are in a whole circle?",6,3|4|5
+multiple,hard,Science: Mathematics,What is the approximate value of mathematical constant e?,2.72,3.14|1.62|1.41
+multiple,easy,Science: Mathematics,How many sides does a trapezium have?,4,3|5|6
+multiple,hard,Science: Mathematics,Which of these numbers is closest to the total number of possible states for an army standard Enigma Machine?,1.58 x 10^20,1.58 x 10^22|1.58 x  10^18|1.58 x 10^24
+multiple,easy,Science: Mathematics,What is the correct order of operations for solving equations?,"Parentheses, Exponents, Multiplication, Division, Addition, Subtraction","Addition, Multiplication, Division, Subtraction, Addition, Parentheses|Parentheses, Exponents, Addition, Substraction, Multiplication, Division|The order in which the operations are written."
+multiple,easy,Science: Mathematics,What is the symbol for Displacement?,&Delta;r,dr|Dp|r
+boolean,easy,Science: Mathematics,An equilateral triangle always has every angle measuring 60&deg;.,True,False
+boolean,medium,Science: Mathematics,"111,111,111 x 111,111,111 = 12,345,678,987,654,321",True,False
+boolean,easy,Science: Mathematics,"A universal set, or a set that contains all sets, exists.",False,True
+boolean,easy,Science: Mathematics,A scalene triangle has two sides of equal length.,False,True

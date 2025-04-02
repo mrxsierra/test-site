@@ -1,0 +1,11 @@
+type,difficulty,category,question,correct_answer,incorrect_answers
+multiple,medium,Science: Computers,What is the number of keys on a standard Windows Keyboard?,104,64|94|76
+multiple,easy,Science: Computers,What is the code name for the mobile operating system Android 7.0?,Nougat,Ice Cream Sandwich|Jelly Bean|Marshmallow
+boolean,medium,Science: Computers,The first computer bug was formed by faulty wires.,False,True
+multiple,medium,Science: Computers,When was the programming language &quot;C#&quot; released?,2000,1998|1999|2001
+boolean,medium,Science: Computers,A Boolean value of &quot;0&quot; represents which of these words?,False,True
+multiple,hard,Science: Computers,The acronym &quot;RIP&quot; stands for which of these?,Routing Information Protocol,Runtime Instance Processes|Regular Interval Processes|Routine Inspection Protocol
+boolean,medium,Science: Computers,The last Windows operating system to be based on the Windows 9x kernel was Windows 98.,False,True
+boolean,medium,Science: Computers,&quot;Windows NT&quot; is a monolithic kernel.,False,True
+multiple,hard,Science: Computers,Who invented the &quot;Spanning Tree Protocol&quot;?,Radia Perlman,Paul Vixie|Vint Cerf|Michael Roberts
+boolean,easy,Science: Computers,The logo for Snapchat is a Bell.,False,True

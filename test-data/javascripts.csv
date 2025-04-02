@@ -1,0 +1,3 @@
+type,difficulty,category,question,correct_answer,incorrect_answers
+multiple,medium,Science: Computers,What is the correct syntax to print a message in the console in JavaScript?,console.log(),console.print()|print()|log()
+multiple,medium,Science: Computers,Which data type is used to create a variable that should store text?,String,Text|MyString|str
