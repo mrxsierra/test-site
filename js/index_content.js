@@ -1,6 +1,9 @@
 // ./js/index-content.js
 import { checkLoginStatus, loadLoginPage, logoutUser } from "./utility/login.js";
 import { loadTestTaker } from "./utility/test_taker.js";
+import { basepath } from "./env.js";
+
+let homepaths = ["index.html", "/", basepath + "index.html", basepath]
 
 export async function indexContentInitialize() {
     const activePage = window.location.pathname.split('/').pop().replace('.html', '');
@@ -10,7 +13,7 @@ export async function indexContentInitialize() {
     console.log(loginLogout);
     console.log("index content initialized")
     // debug
-    if (activePage !== "index") {
+    if (!homepaths.includes(window.location.pathname)) {
         loginLogout.style.display = "none";
         return;
     } else {
