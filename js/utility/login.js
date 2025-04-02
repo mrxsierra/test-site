@@ -13,6 +13,7 @@ export function checkLoginStatus() {
 
     // debug
     console.log("checking login status")
+    console.log(sessionStorage.profile)
     //
 
     if (localStorage.profiles) {

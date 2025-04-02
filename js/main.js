@@ -2,7 +2,16 @@
 
 // Import the loadSidebar function from sidebar.js
 import { indexContentInitialize } from './index_content.js';
-import { loadSidebar, loadTopNav, demoDataButtonHide, demoDataButtonView, initializeDemoData, initializeSidebarToggle } from './sidebar.js';
+import {
+    loadSidebar,
+    loadTopNav,
+    demoDataButtonHide,
+    demoDataButtonView,
+    initializeDemoData,
+    initializeLocalStorageClearBtn,
+    initializeSessionClearBtn,
+    initializeSidebarToggle
+} from './sidebar.js';
 
 // Import the initializeThemeToggle function from toggle_theme.js
 import { initializeThemeToggle } from './toggle_theme.js';
@@ -18,6 +27,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         await initializeSidebarToggle();
         await initializeDemoData();
         await initializeThemeToggle();
+        await initializeSessionClearBtn();
+        await initializeLocalStorageClearBtn();
         if (localStorage.testData) {
             await writeTestsObject();
             await demoDataButtonHide();
@@ -27,7 +38,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
         }
         else {
-            alert("No local Storage Exists");
+            alert("No local Storage Exists.\n\n>>Add test data from sidebar using `demo data button` for quick demo..\n\n>>OR upload using `csv or excel` using `test section` from sidebar.");
             await demoDataButtonView();
         }
         await indexContentInitialize();

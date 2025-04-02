@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: ;
   box-sizing: border-box;
 }
 
@@ -241,11 +241,22 @@ li:hover {
   border-radius: 5px;
 }
 
-#demo-nav {
+#temp-section-nav {
+  background-color: black;
+  color: white;
+  padding: 0.2em;
+  font-size: 12px;
+  margin-bottom:1em;
+}
+  
+
+#demo-nav, #local-storage-clear, #session-clear{
   margin-bottom: 3em;
+  text-align: center;
+  display: grid;
 }
 
-#demo-data-btn {
+#demo-data-btn, #clear-session-btn, #clear-local-storage-btn {
   margin-top: 20px;
   padding: 10px;
   background-color: var(--bg-color);
@@ -253,10 +264,11 @@ li:hover {
   border: 1px solid var(--text-color);
   border-radius: 2em;
   cursor: pointer;
+  text-align: center;
   transition: display 0.3s, background-image 0.3s, font-size 0.3s, opacity 0.3s;
 }
 
-#demo-data-btn:hover {
+#demo-data-btn:hover, #clear-session-btn:hover, #clear-local-storage-btn:hover {
   opacity: 1;
   background-image: var(--bg-image);
   color: #fff;

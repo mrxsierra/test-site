@@ -92,6 +92,7 @@ export function initializeDemoData() {
         loadDemo();
         writeTestsObject();
         demoDataButtonHide();
+        alert("Demo data loaded! plz Refresh page");
     }, false);
 }
 
@@ -105,3 +106,32 @@ export function demoDataButtonHide() {
     demoDataBtn.style.display = "none";
 }
 
+
+let clearSesssionBtn;
+// Load demo data and set up event listeners
+export function initializeSessionClearBtn() {
+    clearSesssionBtn = document.querySelector("#clear-session-btn");
+    if (!clearSesssionBtn) {
+        console.error("Error: #clear-session-btn not found.");
+        return;
+    }
+
+    clearSesssionBtn.addEventListener("click", () => {
+        sessionStorage.clear()
+        alert("Session Data cleared!")
+    }, false);
+}
+let clearLocalStorageBtn;
+// Load demo data and set up event listeners
+export function initializeLocalStorageClearBtn() {
+    clearLocalStorageBtn = document.querySelector("#clear-local-storage-btn");
+    if (!clearLocalStorageBtn) {
+        console.error("Error: #clear-local-storage-btn not found.");
+        return;
+    }
+    
+    clearLocalStorageBtn.addEventListener("click", () => {
+        localStorage.clear()
+        alert("Local Storage cleared!")
+    }, false);
+}
