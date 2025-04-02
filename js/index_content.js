@@ -6,14 +6,13 @@ import { basepath } from "./env.js";
 let homepaths = ["index.html", "/", basepath + "index.html", basepath]
 
 export async function indexContentInitialize() {
-    const activePage = window.location.pathname.split('/').pop().replace('.html', '');
+    const activePage = window.location.pathname;
     const loginLogout = document.getElementById("login-logout-toggle");
     // debug
-    console.log(activePage);
     console.log(loginLogout);
     console.log("index content initialized")
     // debug
-    if (!homepaths.includes(window.location.pathname)) {
+    if (!homepaths.includes(activePage)) {
         loginLogout.style.display = "none";
         return;
     } else {
